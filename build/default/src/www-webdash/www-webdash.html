@@ -1,0 +1,359 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="www-webdash">
+  <template>
+    <style>
+    :host {
+      display: block;
+      --background: #F7F9FA;
+      --dark: #1C2933;
+      --medium: #5A758A;
+      --light: #7D95A8;
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      line-height: 26px;
+    }
+
+    .bg-gray {
+      background-color: var(--background);
+    }
+
+    pre {
+      background: #1F2D38;
+      border-radius: 6px;
+      color: white;
+      padding: 40px;
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 650px;
+      margin-top: 90px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+      white-space: pre-wrap;
+      word-break: keep-all;
+      text-align: left;
+      font-family: Fira Code, Fira Mono, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    }
+    pre .comment{
+      color: var(--light);
+    }
+    pre .command{
+      color: #7CB342;
+    }
+    pre .arg{
+      color: #FBC02D;
+    }
+
+    a {
+      color: initial;
+      text-decoration: none;
+    }
+
+    p {
+      color: var(--medium);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header p {
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      margin-left: 20px;
+      color: #3B4C59;
+    }
+
+    header .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    header .menu-container {
+      display: flex;
+      align-items: center;
+    }
+
+    header .menu-container a {
+      padding-left: 20px;
+      color: var(--dark);
+    }
+
+    h1 {
+      line-height: 46px;
+      font-size: 36px;
+      text-align: center;
+      color: var(--dark);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 104px;
+    }
+
+    h3 {
+      line-height: 30px;
+      font-size: 26px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: var(--dark);
+      max-width: 600px;
+      margin-top: 29px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4{
+      font-weight: normal;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    #video {
+      margin-top: 39px;
+    }
+
+    #community-driven {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    #missing-link {
+      padding-top: 95px;
+      padding-bottom: 111px;
+      background-color: white;
+    }
+
+    #missing-link p {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .subtitle {
+      max-width: 550px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .plugin {
+      padding-top: 62px;
+    }
+
+    .plugin .plugin-right {
+      margin-left: 27px;
+    }
+
+    .plugin .plugin-left {
+      margin-right: 27px;
+    }
+
+    .plugin .plugin-img-left {
+      margin-right: 27px;
+    }
+
+    .plugin .plugin-img-right {
+      margin-left: 27px;
+    }
+
+    .plugin .plugin-right h3,
+    .plugin .plugin-right p {
+      text-align: left;
+    }
+
+    .plugin .plugin-left h3,
+    .plugin .plugin-left p {
+      text-align: right;
+    }
+
+    #get-started {
+      padding-top: 111px;
+      background-color: white;
+    }
+
+    footer {
+      background-color: white;
+      color: var(--light);
+      margin-bottom: 19px;
+    }
+
+    footer p,
+    footer a {
+      color: var(--light);
+    }
+
+    #footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 17px;
+    }
+
+    .list-inline {
+      padding-left: 0;
+    }
+
+    .list-inline li {
+      display: inline-block;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 1050px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    #goto-install{
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="bg-gray">
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="assets/logo.svg" width="32" height="32" alt="Webdash logo">
+          <p>webdash</p>
+        </div>
+        <div class="menu-container">
+          <a id="goto-install" on-click="gotoInstall">Get started</a>
+          <a href="https://github.com/jadjoubran/webdash" target="_blank" rel="noopener">Github</a>
+        </div>
+      </header>
+
+      <h1>Orchestrate your web project with Webdash, the customizable web dashboard</h1>
+      <p class="subtitle">Webdash helps you visualize and Orchestrate every aspect of your web project using community-driven plugins</p>
+
+      <div class="text-center">
+        <video id="video" poster="assets/screenshot.jpg" width="100%" autoplay="" muted="" loop="" playsinline="">
+          <source src="assets/webdash.webm" type="video/webm">
+          <source src="assets/webdash.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div id="missing-link" class="text-center">
+    <div class="container">
+      <img src="assets/missing-link.svg" width="53" height="55" alt="Missing link chain icon">
+      <h2>✨ The missing link ✨</h2>
+      <p>Webdash is the missing dashboard that bridges the gap between the developer and the terminal, resulting in a much
+      smoother &amp; faster workflow.</p>
+    </div>
+  </div>
+
+  <div id="community-driven" class="text-center bg-gray">
+    <div class="container">
+      <img src="assets/developers.svg" alt="Developers icon">
+      <h2>Community driven plugins</h2>
+      <p>You can create your own custom plugins in Web Dash.
+        <br> Here are some plugins built by the community.</p>
+      </div>
+    </div>
+
+    <div id="plugins" class="bg-gray">
+      <div class="container">
+        <div class="plugin grid">
+          <div class="plugin-img-left">
+            <video width="100%" autoplay="" muted="" loop="" playsinline="">
+              <source src="assets/plugins/webdash-package-json.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plugin-right">
+            <h3>Package JSON</h3>
+            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+          </div>
+        </div>
+        <div class="plugin grid">
+          <div class="plugin-left">
+            <h3>NPM Scripts</h3>
+            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+          </div>
+          <div class="plugin-img-right">
+            <video width="100%" autoplay="" muted="" loop="" playsinline="">
+              <source src="assets/plugins/webdash-npm-scripts.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="plugin grid">
+          <div class="plugin-img-left">
+            <video width="100%" autoplay="" muted="" loop="" playsinline="">
+              <source src="assets/plugins/webdash-pwa-manifest.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="plugin-right">
+            <h3>PWA Manifest</h3>
+            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+          </div>
+        </div>
+        <div class="plugin grid">
+          <div class="plugin-left">
+            <h3>Performance Budget</h3>
+            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+          </div>
+          <div class="plugin-img-right">
+            <img width="100%" src="assets/plugins/webdash-performance-budget.png" alt="Webdash Performance Budget preview">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="get-started" class="text-center">
+      <div class="container">
+        <img src="assets/spaceship.svg" width="44" height="44" alt="">
+        <h2>Get started</h2>
+        <p>Follow these steps to start using Webdash in your front-end project.</p>
+
+        <pre id="install"><div class="comment">#webdash core</div><div><span class="command">npm</span> install <span class="arg">--save-dev</span> webdash</div><div class="comment">#webdash plugins</div><div><span class="command">npm</span> install <span class="arg">--save-dev</span> webdash-package-json webdash-npm-scripts webdash-performance-budget webdash-pwa-manifest</div><div class="comment">#serve</div><div>./node_modules/.bin/<span class="command">webdash</span> <span class="arg">serve</span></div></pre>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div id="footer">
+          <p>
+            Built with ❤️ by
+            <a href="https://jadjoubran.io" target="_blank" rel="noopener">Jad Joubran</a>
+          </p>
+          <ul class="list-inline">
+            <li><a href="" target="_blank" rel="noopener">Create a plugin</a></li>
+            <li><a href="https://github.com/jadjoubran/webdash" target="_blank" rel="noopener">Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  </template>
+
+  <script>
+    class WwwWebdash extends Polymer.Element {
+      static get is() { return 'www-webdash'; }
+
+      gotoInstall(){
+        this.$.install.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    window.customElements.define(WwwWebdash.is, WwwWebdash);
+  </script>
+</dom-module>
