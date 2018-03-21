@@ -26,7 +26,7 @@
       font-size: 18px;
       line-height: 30px;
       max-width: 650px;
-      margin-top: 90px;
+      margin-top: 50px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 100px;
@@ -39,10 +39,10 @@
       color: var(--light);
     }
     pre .command{
-      color: #7CB342;
+      color: #81C784;
     }
     pre .arg{
-      color: #FBC02D;
+      color: #FFA726;
     }
 
     a {
@@ -50,8 +50,21 @@
       text-decoration: none;
     }
 
-    p {
+    p, ul{
       color: var(--medium);
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    .plugin ul,
+    .plugin p{
+      color: var(--medium);
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    p{
+      line-height: 30px;
     }
 
     a:hover {
@@ -68,8 +81,8 @@
     header p {
       text-transform: uppercase;
       font-weight: bold;
-      letter-spacing: 0.2em;
-      margin-left: 20px;
+      letter-spacing: 0.05em;
+      margin-left: 15px;
       color: #3B4C59;
     }
 
@@ -81,6 +94,7 @@
     header .menu-container {
       display: flex;
       align-items: center;
+      font-size: 17px;
     }
 
     header .menu-container a {
@@ -99,6 +113,12 @@
       margin-top: 104px;
     }
 
+    h2{
+      font-size: 32px;
+      line-height: 42px;
+      color: var(--dark);
+    }
+
     h3 {
       line-height: 30px;
       font-size: 26px;
@@ -112,19 +132,32 @@
     }
 
     h1,
-    h2,
-    h3,
-    h4{
+    h2{
       font-weight: normal;
+    }
+
+    h3{
+      font-weight: 500;
     }
 
     .text-center {
       text-align: center;
     }
 
-    #video {
+    #video-container {
       margin-top: 39px;
+      position: relative;
+      top: 6px;
+    }
+
+    #video{
       background-color: #1F2D38;
+    }
+
+    #browser{
+      position: relative;
+      top: 7px;
+      box-shadow: 0px -4px 20px rgba(30, 54, 77, 0.05);
     }
 
     #community-driven {
@@ -139,8 +172,11 @@
     }
 
     #missing-link p {
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
     }
 
     .subtitle {
@@ -148,10 +184,47 @@
       margin-left: auto;
       margin-right: auto;
       text-align: center;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 31px;
+    }
+
+    .hero-content{
+      box-shadow: inset 0px -4px 20px rgba(30, 54, 77, 0.05);
     }
 
     .plugin {
-      padding-top: 62px;
+      padding-top: 120px;
+    }
+    .plugin:first-child{
+      padding-top: 0;
+    }
+    .plugin:last-child{
+      padding-bottom: 100px;
+    }
+    .plugin h3{
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 10px;
+    }
+    .plugin ul{
+      line-height: 40px;
+      list-style: none;
+    }
+    .plugin li {
+      padding-left: 1em;
+      text-indent: -1.7em;
+    }
+    .plugin li::before {
+      content: "• ";
+      color: #32BFC4;
+      position: relative;
+      left: -10px;
+      font-size: 20px;
+    }
+
+    .plugin li{
+      color: var(--medium);
     }
 
     .plugin .plugin-right {
@@ -176,19 +249,20 @@
     }
 
     .plugin .plugin-left h3,
-    .plugin .plugin-left p {
-      text-align: right;
+    .plugin .plugin-left p,
+    .plugin .plugin-left ul {
+      text-align: left;
     }
 
     #get-started {
-      padding-top: 111px;
+      padding-top: 90px;
       background-color: white;
     }
 
     footer {
       background-color: white;
       color: var(--light);
-      margin-bottom: 19px;
+      margin-bottom: 5px;
     }
 
     footer p,
@@ -199,6 +273,9 @@
     #footer {
       display: flex;
       justify-content: space-between;
+    }
+
+    #footer p, ul{
       font-size: 17px;
     }
 
@@ -208,13 +285,19 @@
 
     .list-inline li {
       display: inline-block;
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 7px;
+      padding-right: 7px;
     }
 
     .container {
       margin: 0 auto;
       max-width: 1050px;
+    }
+    @media (max-width: 1050px){
+      .container{
+        margin-left: 20px;
+        margin-right: 20px;
+      }
     }
 
     .grid {
@@ -228,26 +311,52 @@
   </style>
 
   <div class="bg-gray">
-    <div class="container">
-      <header>
-        <div class="logo-container">
-          <img src="assets/logo.svg" width="32" height="32" alt="Webdash logo">
-          <p>webdash</p>
-        </div>
-        <div class="menu-container">
-          <a id="goto-install" on-click="gotoInstall">Get started</a>
-          <a href="https://github.com/jadjoubran/webdash" target="_blank" rel="noopener">Github</a>
-        </div>
-      </header>
+    <div class="hero-content">
+      <div class="container">
+        <header>
+          <div class="logo-container">
+            <img src="assets/logo.svg" width="30" height="30" alt="Webdash logo">
+            <p>webdash</p>
+          </div>
+          <div class="menu-container">
+            <a id="goto-install" on-click="gotoInstall">Get Started</a>
+            <a href="https://github.com/jadjoubran/webdash" target="_blank" rel="noopener">Github</a>
+          </div>
+        </header>
 
-      <h1>Orchestrate your web project with Webdash, the customizable web dashboard</h1>
-      <p class="subtitle">Webdash helps you visualize and Orchestrate every aspect of your web project using community-driven plugins</p>
+        <h1>Orchestrate your web project with Webdash the customizable web dashboard</h1>
+        <p class="subtitle">Webdash helps you visualize and Orchestrate every aspect of your web project using community-driven plugins</p>
 
-      <div class="text-center">
-        <video id="video" poster="assets/screenshot.jpg" width="100%" autoplay muted loop playsinline>
-          <source src="assets/webdash.webm" type="video/webm"/>
-          <source src="assets/webdash.mp4" type="video/mp4"/>
-        </video>
+        <div class="text-center">
+          <div id="video-container">
+            <svg id="browser" width="100%" viewBox="0 0 1110 28" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Canvas" transform="translate(555 -1803)">
+                <g id="Group">
+                  <g id="Rectangle">
+                    <use xlink:href="#path0_fill" transform="translate(-555 1803)" fill="#FFF"/>
+                  </g>
+                  <g id="Ellipse">
+                    <use xlink:href="#path1_fill" transform="translate(-542.047 1814)" fill="#E5E5E5"/>
+                  </g>
+                  <g id="Ellipse">
+                    <use xlink:href="#path1_fill" transform="translate(-530.09 1814)" fill="#E5E5E5"/>
+                  </g>
+                  <g id="Ellipse">
+                    <use xlink:href="#path1_fill" transform="translate(-518.133 1814)" fill="#E5E5E5"/>
+                  </g>
+                </g>
+              </g>
+              <defs>
+                <path id="path0_fill" d="M0 4a4 4 0 0 1 4-4h1102a4 4 0 0 1 4 4v24H0V4z"/>
+                <path id="path1_fill" d="M6.975 3.5c0 1.933-1.562 3.5-3.488 3.5A3.494 3.494 0 0 1 0 3.5C0 1.567 1.561 0 3.487 0a3.494 3.494 0 0 1 3.488 3.5z"/>
+              </defs>
+            </svg>
+            <video id="video" poster="assets/screenshot.jpg" width="100%" autoplay muted loop playsinline>
+              <source src="assets/webdash.webm" type="video/webm"/>
+              <source src="assets/webdash.mp4" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -255,7 +364,7 @@
   <div id="missing-link" class="text-center">
     <div class="container">
       <img src="assets/missing-link.svg" width="53" height="55" alt="Missing link chain icon">
-      <h2>✨ The missing link ✨</h2>
+      <h2>The missing link</h2>
       <p>Webdash is the missing dashboard that bridges the gap between the developer and the terminal, resulting in a much
       smoother &amp; faster workflow.</p>
     </div>
@@ -280,13 +389,25 @@
           </div>
           <div class="plugin-right">
             <h3>Package JSON</h3>
-            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+            <p>Visualize your node dependencies, and see the exact version installed of every node module.</p>
+            <ul>
+              <li>Visualize your package.json</li>
+              <li>See installed versions</li>
+              <li>One-click update</li>
+              <li>Follows your version constraints</li>
+            </ul>
           </div>
         </div>
         <div class="plugin grid">
           <div class="plugin-left">
             <h3>NPM Scripts</h3>
-            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+            <p>Run your npm scripts straight from the dashboard using one-click buttons.</p>
+            <ul>
+              <li>Run scripts from webdash</li>
+              <li>Access remaining scripts in dropdown</li>
+              <li>Cancel long running tasks</li>
+              <li>View command output</li>
+            </ul>
           </div>
           <div class="plugin-img-right">
             <video width="100%" autoplay muted loop playsinline>
@@ -302,13 +423,23 @@
           </div>
           <div class="plugin-right">
             <h3>PWA Manifest</h3>
-            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+            <p>Preview your Web App Manifest on Android.</p>
+            <ul>
+              <li>Icon on homescreen</li>
+              <li>Splash screen</li>
+              <li>Status bar theme color</li>
+            </ul>
           </div>
         </div>
         <div class="plugin grid">
           <div class="plugin-left">
             <h3>Performance Budget</h3>
-            <p>package json plugin webdash description here that will be customized for every single plugin in webdash.</p>
+            <p>Keep track of the total size of your production JavaScript files.</p>
+            <ul>
+              <li>Keep track of your budget</li>
+              <li>Customize your budget</li>
+              <li>Get warned when you exceed your budget</li>
+            </ul>
           </div>
           <div class="plugin-img-right">
             <img width="100%" src="assets/plugins/webdash-performance-budget.png" alt="Webdash Performance Budget preview">
@@ -320,7 +451,7 @@
     <div id="get-started" class="text-center">
       <div class="container">
         <img src="assets/spaceship.svg" width="44" height="44" alt="">
-        <h2>Get started</h2>
+        <h2>Get Started</h2>
         <p>Follow these steps to start using Webdash in your front-end project.</p>
 
         <pre id="install"><div class="comment">#webdash core</div><div><span class="command">npm</span> install <span class="arg">--save-dev</span> webdash</div><div class="comment">#webdash plugins</div><div><span class="command">npm</span> install <span class="arg">--save-dev</span> webdash-package-json webdash-npm-scripts webdash-performance-budget webdash-pwa-manifest</div><div class="comment">#serve</div><div>./node_modules/.bin/<span class="command">webdash</span> <span class="arg">serve</span></div></pre>
@@ -335,7 +466,7 @@
             <a href="https://jadjoubran.io" target="_blank" rel="noopener">Jad Joubran</a>
           </p>
           <ul class="list-inline">
-            <li><a href="" target="_blank" rel="noopener">Create a plugin</a></li>
+            <li><a href="" target="_blank" rel="noopener">Create a Plugin</a></li>
             <li><a href="https://github.com/jadjoubran/webdash" target="_blank" rel="noopener">Github</a></li>
           </ul>
         </div>
