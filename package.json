@@ -1,0 +1,26 @@
+{
+  "name": "www-webdash",
+  "version": "1.0.0",
+  "description": "Webdash website",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "polymer build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadjoubran/www-webdash.git"
+  },
+  "author": "Jad Joubran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadjoubran/www-webdash/issues"
+  },
+  "homepage": "https://github.com/jadjoubran/www-webdash#readme",
+  "dependencies": {
+    "polymer-cli": "^1.6.0"
+  }
+}
