@@ -309,6 +309,9 @@
     }
 
     @media (max-width: 800px){
+      header{
+        padding-top: 0;
+      }
       .grid{
         grid-template-columns: 1fr;
       }
@@ -339,8 +342,8 @@
       cursor: pointer;
     }
 
-    @media (max-width: 365px){
-      #goto-install{
+    @media (max-width: 400px){
+      #logo-title{
         display: none;
       }
     }
@@ -352,7 +355,7 @@
         <header>
           <div class="logo-container">
             <img src="assets/logo.svg" width="30" height="30" alt="Webdash logo">
-            <p>webdash</p>
+            <p id="logo-title">webdash</p>
           </div>
           <div class="menu-container">
             <a id="goto-install" on-click="gotoInstall">Get Started</a>
