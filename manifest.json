@@ -1,7 +1,0 @@
-{
-  "name": "www-webdash",
-  "short_name": "www-webdash",
-  "description": "Webdash website",
-  "start_url": "/",
-  "display": "standalone"
-}
