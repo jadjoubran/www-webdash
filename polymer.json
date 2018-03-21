@@ -2,6 +2,9 @@
   "builds": [
     { "preset": "es6-bundled" }
   ],
+  "sources": [
+    "assets/**/*"
+  ],
   "lint": {
     "rules": [
       "polymer-2"
