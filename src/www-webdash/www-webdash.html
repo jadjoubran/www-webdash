@@ -302,11 +302,44 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 800px){
+      .grid{
+        grid-template-columns: 1fr;
+      }
+      .plugin .plugin-img-left {
+        margin-right: 0;
+      }
+
+      .plugin .plugin-img-right {
+        margin-left: 0;
+        padding-top: 20px;
+      }
+      .plugin{
+        padding-top: 60px;
+      }
+      .plugin h3{
+        margin-top: 30px;
+      }
+      .plugin .plugin-right{
+        order: -1;
+      }
+      #footer{
+        display: block;
+        text-align: center;
+      }
     }
 
     #goto-install{
       cursor: pointer;
+    }
+
+    @media (max-width: 400px){
+      #goto-install{
+        display: none;
+      }
     }
   </style>
 
@@ -351,7 +384,7 @@
                 <path id="path1_fill" d="M6.975 3.5c0 1.933-1.562 3.5-3.488 3.5A3.494 3.494 0 0 1 0 3.5C0 1.567 1.561 0 3.487 0a3.494 3.494 0 0 1 3.488 3.5z"/>
               </defs>
             </svg>
-            <video id="video" poster="assets/screenshot.jpg" width="100%" autoplay muted loop playsinline>
+            <video id="video" poster="assets/poster.png" width="100%" autoplay muted loop playsinline>
               <source src="assets/webdash.webm" type="video/webm"/>
               <source src="assets/webdash.mp4" type="video/mp4"/>
             </video>
@@ -464,6 +497,8 @@
           <p>
             Built with ❤️ by
             <a href="https://jadjoubran.io" target="_blank" rel="noopener">Jad Joubran</a>
+            &amp;
+            <a href="https://nicolesaidy.com" target="_blank" rel="noopener">Nicole Saidy</a>
           </p>
           <ul class="list-inline">
             <li><a href="" target="_blank" rel="noopener">Create a Plugin</a></li>
