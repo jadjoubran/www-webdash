@@ -288,6 +288,17 @@
         background-color: white;
       }
 
+      #create-plugin{
+        padding-top: 90px;
+        padding-bottom: 90px;
+      }
+
+      #create-plugin p{
+        max-width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       footer {
         background-color: white;
         color: var(--light);
@@ -399,7 +410,7 @@
 
           <h1>Orchestrate your web project with&nbsp;
             <br id="split">Webdash - the customizable web dashboard</h1>
-          <p class="subtitle">Webdash helps you visualize, monitor &amp; manage your web project using community-driven plugins</p>
+          <p class="subtitle">Webdash helps you visualize, monitor &amp; manage your web project using community-driven plugins.</p>
 
           <div class="text-center">
             <div id="video-container">
@@ -543,6 +554,15 @@
         <p>Follow these steps to start using Webdash in your front-end project.</p>
 
         <pre id="install"><div id="switch" on-click="switch">{{npmYarnSwitch}}</div><div class="comment">#webdash core (requires node >= 8)</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash</div><div class="comment">#webdash plugins</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash-package-json webdash-npm-scripts webdash-performance-budget webdash-pwa-manifest webdash-readme-preview</div><div class="comment">#serve</div><div><span class="command">{{npx}}</span> <span class="arg">webdash</span> serve</div></pre>
+      </div>
+    </div>
+
+    <div id="create-plugin" class="text-center bg-gray">
+      <div class="container">
+        <img src="assets/create.svg" width="44" height="44" alt="">
+        <h2>Create a plugin</h2>
+        <p>Using the Webdash plugin generator, you can easily create your own plugins. 
+          Follow the <a href="https://github.com/jadjoubran/webdash/wiki/Create-a-plugin" target="_blank" rel="noopener">Create a plugin</a> guide on GitHub.</p>
       </div>
     </div>
 
