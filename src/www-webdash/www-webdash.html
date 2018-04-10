@@ -86,6 +86,10 @@
         font-weight: 300;
       }
 
+      .plugin video {
+        border-radius: 3px;
+      }
+
       p {
         line-height: 30px;
       }
@@ -288,12 +292,12 @@
         background-color: white;
       }
 
-      #create-plugin{
+      #create-plugin {
         padding-top: 90px;
         padding-bottom: 90px;
       }
 
-      #create-plugin p{
+      #create-plugin p {
         max-width: 550px;
         margin-left: auto;
         margin-right: auto;
@@ -533,15 +537,31 @@
         </div>
         <div class="plugin grid">
           <div class="plugin-img-left">
-            <img width="100%" src="assets/plugins/webdash-readme-preview.png" alt="Webdash Readme preview">
+            <video width="100%" autoplay muted loop playsinline>
+              <source src="assets/plugins/webdash-workbox.mp4" type="video/mp4" />
+            </video>
           </div>
           <div class="plugin-right">
+            <h3>Workbox</h3>
+            <p>Generate your workbox configuration by answering questions from the wizard</p>
+            <ul>
+              <li>One-click install if workbox-cli is not installed</li>
+              <li>Wizard asks you questions with smart defaults</li>
+              <li>Shows stats about your existing service worker</li>
+            </ul>
+          </div>
+        </div>
+        <div class="plugin grid">
+          <div class="plugin-left">
             <h3>Readme Preview</h3>
             <p>Preview your README.md file straight from the dashboard for a seamless experience</p>
             <ul>
               <li>Converts README.md to HTML preview</li>
               <li>Supports Github flavored markdown</li>
             </ul>
+          </div>
+          <div class="plugin-img-right">
+            <img width="100%" src="assets/plugins/webdash-readme-preview.png" alt="Webdash Readme preview">
           </div>
         </div>
       </div>
@@ -553,7 +573,7 @@
         <h2>Get Started</h2>
         <p>Follow these steps to start using Webdash in your front-end project.</p>
 
-        <pre id="install"><div id="switch" on-click="switch">{{npmYarnSwitch}}</div><div class="comment">#webdash core (requires node >= 8)</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash</div><div class="comment">#webdash plugins</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash-package-json webdash-npm-scripts webdash-performance-budget webdash-pwa-manifest webdash-readme-preview</div><div class="comment">#serve</div><div><span class="command">{{npx}}</span> <span class="arg">webdash</span> serve</div></pre>
+        <pre id="install"><div id="switch" on-click="switch">{{npmYarnSwitch}}</div><div class="comment">#webdash core (requires node >= 8)</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash</div><div class="comment">#webdash plugins</div><div><span class="command">{{npm}}</span> <span>{{install}}</span> <span class="arg">{{devFlag}}</span> webdash-package-json webdash-npm-scripts webdash-performance-budget webdash-pwa-manifest webdash-readme-preview webdash-workbox</div><div class="comment">#serve</div><div><span class="command">{{npx}}</span> <span class="arg">webdash</span> serve</div></pre>
       </div>
     </div>
 
@@ -561,8 +581,8 @@
       <div class="container">
         <img src="assets/create.svg" width="44" height="44" alt="">
         <h2>Create a plugin</h2>
-        <p>Using the Webdash plugin generator, you can easily create your own plugins. 
-          Follow the <a href="https://github.com/jadjoubran/webdash/wiki/Create-a-plugin" target="_blank" rel="noopener">Create a plugin</a> guide on GitHub.</p>
+        <p>Using the Webdash plugin generator, you can easily create your own plugins. Follow the
+          <a href="https://github.com/jadjoubran/webdash/wiki/Create-a-plugin" target="_blank" rel="noopener">Create a plugin</a> guide on GitHub.</p>
       </div>
     </div>
 
