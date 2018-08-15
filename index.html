@@ -1,55 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>Webdash | The customizable web dashboard</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <meta name="description" content="Orchestrate your web project with Webdash, the customizable web dashboard.">
+  <title>Webdash | The customizable web dashboard</title>
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Webdash">
-    <meta name="twitter:description" content="Orchestrate your web project with Webdash, the customizable web dashboard.">
-    <meta name="twitter:image" content="/assets/poster.png">
+  <meta name="description" content="Orchestrate your web project with Webdash, the customizable web dashboard.">
 
-    <meta name="og:title" content="Webdash" />
-    <meta name="og:type" content="article" />
-    <meta name="og:image" content="/assets/poster.png" />
-    <meta name="og:description" content="Orchestrate your web project with Webdash, the customizable web dashboard." />
-    <meta name="og:site_name" content="Webdash" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Webdash">
+  <meta name="twitter:description" content="Orchestrate your web project with Webdash, the customizable web dashboard.">
+  <meta name="twitter:image" content="/assets/poster.png">
 
-    <meta name="google-site-verification" content="q72NH3BW4qzEHjKeGcMHt-Wt3duVRzzzTmR087JGefE" />
+  <meta name="og:title" content="Webdash" />
+  <meta name="og:type" content="article" />
+  <meta name="og:image" content="/assets/poster.png" />
+  <meta name="og:description" content="Orchestrate your web project with Webdash, the customizable web dashboard." />
+  <meta name="og:site_name" content="Webdash" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#1F2D38">
+  <meta name="google-site-verification" content="q72NH3BW4qzEHjKeGcMHt-Wt3duVRzzzTmR087JGefE" />
 
-    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#1F2D38">
 
-    <link rel="import" href="/src/www-webdash/www-webdash.html">
-  </head>
-  <body>
-    <style>
-      body{
-        margin: 0;
-      }
-    </style>
-    <www-webdash></www-webdash>
+  <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114301896-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <link rel="import" href="/src/www-webdash/www-webdash.html">
+</head>
 
-      gtag('config', 'UA-114301896-2');
-    </script>
-  </body>
+<body>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+  <www-webdash></www-webdash>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114301896-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-114301896-2', { 'anonymize_ip': true });
+  </script>
+</body>
+
 </html>
