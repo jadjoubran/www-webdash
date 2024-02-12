@@ -1,0 +1,24 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Canvas" transform="translate(-74 -4576)">
+    <g id="Group 8">
+      <g id="ic_add_to_photos_48px">
+        <g id="Group">
+          <g id="Vector">
+            <use xlink:href="#path0_fill" transform="translate(74 4584)" fill="#11BCC2"/>
+          </g>
+        </g>
+      </g>
+      <g id="Vector">
+        <use xlink:href="#path1_fill" transform="translate(82 4576)" fill="#111"/>
+      </g>
+      <g id="Vector">
+        <use xlink:href="#path2_fill" transform="translate(88 4582)" fill="#FFF"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <path id="path0_fill" d="M4 0H0v28c0 2.21 1.79 4 4 4h28v-4H4V0z"/>
+    <path id="path1_fill" d="M4 0h24c2.21 0 4 1.79 4 4v24c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4V4c0-2.21 1.79-4 4-4z"/>
+    <path id="path2_fill" d="M12 12h8V8h-8V0H8v8H0v4h8v8h4v-8z"/>
+  </defs>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Canvas" transform="translate(22 -4578)">
+<g id="spaceship">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path0_fill" transform="translate(-19.017 4583.01)" fill="#111"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path1_fill" transform="translate(3.039 4601)" fill="#111"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(-22 4610.46)" fill="#11BCC2"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path3_fill" transform="translate(-15.293 4581.76)" fill="#111"/>
+</g>
+<g id="Vector">
+<use xlink:href="#path4_fill" transform="translate(7.556 4578)" fill="#11BCC2"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M17.904.433A16.255 16.255 0 0 0 .134 8.065.963.963 0 0 0 .28 9.234l4.691 4.691c2.5-3.903 6.686-9.2 12.932-13.492z"/>
+<path id="path1_fill" d="M0 13.02l4.72 4.717a.958.958 0 0 0 1.168.148 16.375 16.375 0 0 0 3.269-2.512c4.107-4.107 5.673-9.9 4.34-15.373C9.195 6.272 3.895 10.495 0 13.02z"/>
+<path id="path2_fill" d="M5.772 0A5.777 5.777 0 0 0 0 5.771v4.81c0 .53.43.962.962.962h4.81a5.777 5.777 0 0 0 5.771-5.772A5.777 5.777 0 0 0 5.772 0z"/>
+<path id="path3_fill" d="M20.954 0C6.02 6.991.142 21.142.07 21.326a.963.963 0 0 0 .213 1.039l10.882 10.882a.962.962 0 0 0 1.045.21c.182-.075 14.264-6.019 21.275-20.928L20.954 0zm-2.65 19.074a3.848 3.848 0 1 1 0-7.695 3.848 3.848 0 0 1 0 7.695z"/>
+<path id="path4_fill" d="M11.465 14.402c1.587-3.887 2.69-8.329 2.977-13.385a.959.959 0 0 0-1.01-1.015C8.352.267 3.895 1.356 0 2.937l11.465 11.465z"/>
+</defs>
+</svg>
