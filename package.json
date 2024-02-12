@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jadjoubran/www-webdash#readme",
   "dependencies": {
-    "polymer-cli": "^1.6.0"
+    "bower": "^1.8.14",
+    "polymer-cli": "^1.9.11"
   }
 }
